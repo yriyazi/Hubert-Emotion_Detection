@@ -1,0 +1,45 @@
+# Model hyperparameters
+inference_mode        : True
+learning_rate         : 0.005
+num_epochs            : 30
+seed                  : 42
+ckpt_save_freq        : 10
+
+# Dataset parameters
+dataset:
+  path                : ./dataset/archive 
+  train_split         : 0.8
+  validation_split    : 0.1           
+  test_split          : 0.1
+  classes             : {'N':0,
+                        'A':1,
+                        'W':2,
+                        'H':3,
+                        'F':4,
+                        'S':5}
+
+Tokenizer:
+  Max_lenght : 150
+
+
+# Model architecture
+model:
+  name                  : 'hubert-base'
+  pretrained            : 'facebook/hubert-base-ls960'
+  num_classes           : 6
+  Wave2vec              : False
+  output_hidden_states  : True
+  #{'last_hidden_state','hidden_states'}
+  Act                   : 'last_hidden_state'
+  hidden_states_layer_number : 4   
+
+# Optimization parameters
+optimizer :
+  name            : AdamW
+
+# Scheduler parameters
+scheduler:
+  name        : OneCylcle
+  start_factor: 1
+  end_factor  : 0.5
+  total_iters : 20
