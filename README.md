@@ -76,6 +76,3 @@ Contributions to the project are welcome! If you want to contribute, please foll
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Remember to replace placeholders like `your-username` with your actual GitHub username, and provide appropriate paths and filenames for the preprocessing and training scripts as needed. Also, make sure to have the necessary imports and configurations in your actual project files.
